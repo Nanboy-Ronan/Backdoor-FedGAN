@@ -5,8 +5,8 @@ Deep Learning-based image synthesis techniques have been applied in healthcare r
 ## Usage
 We are continue working on this project. Thus this repository contains all implementation in the paper and some other configurations beyond. Waiting to see our updated code.
 ### Environment
-This project is based on PyTorch 1.10.
-The environment is also provided in 'environment.yml', but it may contain more libraries than needed for this project.
+This project is based on PyTorch 1.10. You can simply set up the environment of [stylegan2-ada-pytorch](https://github.com/NVlabs/stylegan2-ada-pytorch). 
+We also provide 'environment.yml', but it may contain more libraries than needed for this project as we are progressing this project.
 
 ### Train
 ```bash
@@ -35,5 +35,7 @@ If you find our project to be useful, please cite our paper.
 Our coding and design are referred to the following open source repositories. Thanks to the greate people and their amazing work.
 
 [stylegan2-ada-pytorch](https://github.com/NVlabs/stylegan2-ada-pytorch)
+
+[projected_gan](https://github.com/autonomousvision/projected_gan)
 
 [Hidden-Trigger-Backdoor-Attacks](https://github.com/UMBCvision/Hidden-Trigger-Backdoor-Attacks)
