@@ -1,0 +1,30 @@
+#!/bin/bash
+ 
+#PBS -l walltime=48:00:00,select=1:ncpus=1:ompthreads=12:ngpus=1:mem=16gb:gpu_mem=32gb
+#PBS -N ReleaseA
+#PBS -A st-xli135-1-gpu
+#PBS -m abe
+#PBS -M jinruinan@163.com
+#PBS -o trans.txt
+#PBS -e trans_error.txt
+ 
+################################################################################
+
+module load Software_Collection/2021
+module load gcc
+module load ninja/1.10.2
+
+source activate
+conda activate /scratch/st-xli135-1/rjin02/env/torch1.10
+ 
+cd /scratch/st-xli135-1/rjin02/Release
+
+nvidia-smi
+
+# isic
+
+# python scripts/attack.py --n_epochs 200 --batch 32 --save_path /scratch/st-xli135-1/rjin02/Release/attack/cnn --data_root /scratch/st-xli135-1/rjin02/DataSets/isic_fin/train  # attack
+python scripts/attack.py --n_epochs 200 --batch 32 --attack --save_path /scratch/st-xli135-1/rjin02/Release/attack/attack --data_root /scratch/st-xli135-1/rjin02/DataSets/isic_fin/train  # attack
+# python scripts/attack.py --n_epochs 200 --batch 32 --attack --outlier_detect --save_path /scratch/st-xli135-1/rjin02/Release/attack/cnn --data_root /scratch/st-xli135-1/rjin02/DataSets/isic_fin/train  # attack
+
+# python scripts/attack.py --n_epochs 100 --grad_penalty 1 --batch 32 --save_path /scratch/st-xli135-1/rjin02/loss_detect/isic/nopoi/cnn --data_root /scratch/st-xli135-1/rjin02/DataSets/isic_fin/train  # Trans64_32
