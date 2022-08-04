@@ -1,4 +1,4 @@
-name: null
+name: Backdoor-FedGAN
 channels:
   - pytorch
   - defaults
@@ -179,5 +179,3 @@ dependencies:
   - zeromq=4.3.4=h2531618_0
   - zlib=1.2.11=h166bdaf_1014
   - zstd=1.5.2=h8a70e8d_1
-prefix: /scratch/st-xli135-1/rjin02/env/torch1.10
-
