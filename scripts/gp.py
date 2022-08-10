@@ -342,6 +342,7 @@ for epoch in range(n_epochs):
     clf = IsolationForest(max_samples=len(detect_results), random_state = 999, contamination= "auto")
     preds = clf.fit_predict(detect_results)
     if args.outlier_detect and epoch > args.warmup:
+        assert(args.attack)
         print(preds)
         is_outlier = False
         neg_idx = []
