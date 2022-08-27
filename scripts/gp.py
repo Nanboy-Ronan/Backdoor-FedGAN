@@ -305,6 +305,7 @@ for model_indx in range(n_disc):
 for model_indx in range(n_disc):
     optimizer_g.append(optim.RMSprop(generator_model[model_indx].parameters(), lr=lr))
 
+# You may wat to change this line of code depending on your data pre-process (either random sample from one dataset or create multiple dataset)
 dataloaders = []
 for model_indx in range(n_disc):
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=args.workers, drop_last=True)
