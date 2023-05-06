@@ -23,11 +23,13 @@ python scripts/gp.py -n_epochs 200 --batch 32 --attack --outlier_detect --save_p
 If you find our project to be useful, please cite our paper.
 
 ```latex
-@article{jin2022backdoor,
-  title={Backdoor Attack is A Devil in Federated GAN-based Medical Image Synthesis},
+@inproceedings{jin2022backdoor,
+  title={Backdoor Attack is a Devil in Federated GAN-Based Medical Image Synthesis},
   author={Jin, Ruinan and Li, Xiaoxiao},
-  journal={arXiv preprint arXiv:2207.00762},
-  year={2022}
+  booktitle={Simulation and Synthesis in Medical Imaging: 7th International Workshop, SASHIMI 2022, Held in Conjunction with MICCAI 2022, Singapore, September 18, 2022, Proceedings},
+  pages={154--165},
+  year={2022},
+  organization={Springer}
 }
 ```
 
